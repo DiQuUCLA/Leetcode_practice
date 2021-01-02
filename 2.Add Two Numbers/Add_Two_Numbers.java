@@ -15,6 +15,8 @@ public class Add_Two_Numbers
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2)
 	{
 		ListNode traverse1, traverse2, prev1, prev2;
+        prev1 = null;
+        prev2 = null;
 		traverse1 = l1;
 		traverse2 = l2;
 
@@ -50,13 +52,13 @@ public class Add_Two_Numbers
 
 		if(traverse1 == null)
 		{
-			prev1.next = traverse2.next;
+			prev1.next = traverse2;
 			traverse1 = prev1.next;
 		}
 
 		while(traverse1!= null && carry == 1)
 		{
-			traverse1.val == (traverse1.val + 1) % 10;
+			traverse1.val = (traverse1.val + 1) % 10;
 			if(traverse1.val > 0)
 			{
 				carry = 0;
