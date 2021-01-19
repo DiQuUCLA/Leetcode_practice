@@ -12,8 +12,7 @@ int* twoSum(int* nums, int numsSize, int target) {
             if(target - nums[i] == nums[j])
             {
                 result[0] = i;
-                result[1] = j;
-                                
+                result[1] = j;                                
             }
         }
     }
